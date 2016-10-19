@@ -10,6 +10,8 @@ class I_handling(object):
 	def resize(self, x_y, new_name=''):
 		#x is width
 		#y is height
+		#checking to make sure that x_y is a tuple containing (width, height)
+		assert type(x_y) == tuple, "{0} is not a tuple".format(x_y) 
 		new_image = self.image.resize(x_y)
 		if new_name != '':
 			new_image.save(new_name)
