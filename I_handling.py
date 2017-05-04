@@ -17,7 +17,7 @@ class I_handling(object):
 			new_image.save(new_name)
 			new_image.close()
 		else:
-			new_image.save(fname)
+			new_image.save(self.fname)
 			new_image.close()
 
 	def close(self):
