@@ -19,6 +19,9 @@ class I_handling(object):
 		else:
 			new_image.save(self.fname)
 			new_image.close()
+	def resizeByFactor(self, factor, x_y, new_name=''):
+		newSize = (x_y[0] * factor, x_y[1] * factor)
+		self.resize(newSize, new_name)
 
 	def close(self):
 		print("Closing file: {0}".format(self.fname))
